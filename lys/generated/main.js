@@ -1,0 +1,2 @@
+let e,t;const{module:n,instance:r}=await WebAssembly.instantiateStreaming(await self.fetch(import.meta.resolve("../generated/main.wasm")),{env:{printf(e){const n=t.getUint32(e,!0),r=e+Uint32Array.BYTES_PER_ELEMENT;console.log(((e,n)=>{let r="";for(let o=e;o<e+n;o+=Uint16Array.BYTES_PER_ELEMENT)r+=String.fromCharCode(t.getUint16(o,!0));return r})(r,n))}}}),o=r.exports;e=o.memory,t=new DataView(e.buffer),o._start(),console.log(o,o.add(4,5),o.memory),(e=>{for(const[t,n]of Object.entries(e))self[t]=n})(o);
+//# sourceMappingURL=main.js.map

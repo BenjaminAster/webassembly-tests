@@ -1,0 +1,12 @@
+
+import support::env
+
+#[export]
+fun _start(): void = {
+	printf("Hello World! 😎")
+}
+
+#[export]
+fun add(a: i32, b: i32): i32 = {
+	a + b
+}

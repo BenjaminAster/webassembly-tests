@@ -1,0 +1,24 @@
+// package main
+
+// import "math"
+
+// /*
+// tinygo build -o go/main.wasm -target wasm -no-debug -scheduler none -panic trap go/main.go; wasm2wat go/main.wasm -o go/main.wat
+// */
+
+// //go:wasm-module env
+// //export do_something
+// func do_something()
+
+// //go:wasm-module wasi_snapshot_preview1
+// //export fd_write
+// func fd_write(a int, b int, c int, d int) int
+
+// //export hypot
+// func hypot(a float64, b float64) float64 {
+// 	fd_write(1, 2, 3, 4)
+// 	do_something()
+// 	return math.Sqrt(a*a + b*b)
+// }
+
+// func main() {}

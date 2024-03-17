@@ -1,0 +1,2 @@
+let e;const{module:n,instance:t}=await WebAssembly.instantiateStreaming(await self.fetch(import.meta.resolve("../generated/main.wasm")),{env:{__writeln(n,t){let o=new TextDecoder("UTF-8").decode(new Uint8Array(e.buffer,n,t));console.log(JSON.stringify(o))},__panic_abort(...e){console.error(e)}}}),o=t.exports;e=o.memory,o["main.main"](),console.log(o,o["main.add"](4,5),o.memory),(e=>{for(const[n,t]of Object.entries(e))self[n]=t})(o);
+//# sourceMappingURL=main.js.map

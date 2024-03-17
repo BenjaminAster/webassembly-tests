@@ -1,0 +1,2 @@
+let e;const{module:t,instance:n}=await WebAssembly.instantiateStreaming(await self.fetch(import.meta.resolve("../generated/main.wasm")),{odin_env:{write:(()=>{let t="";return(n,o,r)=>{let s=new TextDecoder("UTF-8").decode(new Uint8Array(e.buffer,o,r));s.endsWith("\n")?(t+=s.slice(0,-1),1===n?console.log(JSON.stringify(t)):console.error(JSON.stringify(t)),t=""):t+=s}})()}}),o=n.exports;e=o.memory,o._start(),console.log(o,o.add(4,5),o.memory),(e=>{for(const[t,n]of Object.entries(e))self[t]=n})(o);
+//# sourceMappingURL=main.js.map

@@ -1,0 +1,40 @@
+(module
+ (type $none_=>_none (func))
+ (type $i32_i32_=>_none (func (param i32 i32)))
+ (type $none_=>_i32 (func (result i32)))
+ (type $i32_i32_=>_i32 (func (param i32 i32) (result i32)))
+ (import "env" "printf" (func $support::env::printf_1 (param i32 i32)))
+ (memory $mem 1)
+ (data (i32.const 56) "\08\00\00\00t\00r\00u\00e")
+ (data (i32.const 69) "\n\00\00\00f\00a\00l\00s\00e")
+ (data (i32.const 84) "\02\00\00\000")
+ (data (i32.const 91) "\02\00\00\000")
+ (data (i32.const 16) "\1e\00\00\00H\00e\00l\00l\00o\00 \00W\00o\00r\00l\00d\00!\00 \00=\d8\0e\de")
+ (global $system::core::memory::offset (mut i32) (i32.const 0))
+ (export "memory" (memory $mem))
+ (export "test_getMaxMemory" (func $system::core::memory::getMaxMemory_1))
+ (export "_start" (func $main::_start_1))
+ (export "add" (func $main::add_1))
+ (start $%%START%%)
+ (func $system::core::memory::getMaxMemory_1 (result i32)
+  (global.get $system::core::memory::offset)
+ )
+ (func $main::_start_1
+  (call $support::env::printf_1
+   (i32.const 16)
+   (i32.const 0)
+  )
+ )
+ (func $main::add_1 (param $0 i32) (param $1 i32) (result i32)
+  (i32.add
+   (local.get $0)
+   (local.get $1)
+  )
+ )
+ (func $%%START%%
+  (global.set $system::core::memory::offset
+   (i32.const 65536)
+  )
+ )
+ ;; custom section "sourceMappingURL", size 14
+)
