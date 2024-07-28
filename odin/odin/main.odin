@@ -39,6 +39,16 @@ add :: proc(a: f64, b: f64) -> f64 {
 // 	return sum
 // }
 
+@(export)
+test3 :: proc () -> ^[dynamic]i32 {
+	arr: [dynamic]i32
+	append(&arr, 1)
+	append(&arr, 2)
+	append(&arr, 4)
+	append(&arr, 8)
+	return &arr
+}
+
 
 @(export)
 testtest2 :: proc "odin" (a: i32) -> [4]i32 {

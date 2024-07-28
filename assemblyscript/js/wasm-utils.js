@@ -1,6 +1,6 @@
 
-// / <reference types="better-typescript" />
-/// <reference path="../../../better-ts/index.d.ts" />
+/// <reference types="better-typescript" />
+// / <reference path="../../../../better-ts/index.d.ts" />
 
 const ClassIds = {
 	OBJECT: 0,

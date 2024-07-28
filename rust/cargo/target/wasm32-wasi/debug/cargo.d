@@ -1,1 +1,0 @@
-/mnt/c/Users/Benja/Documents\ -\ SSD/Firebase/Website/public/experiments/webassembly-tests/rust/cargo/target/wasm32-wasi/debug/cargo.wasm: /mnt/c/Users/Benja/Documents\ -\ SSD/Firebase/Website/public/experiments/webassembly-tests/rust/cargo/src/main.rs
